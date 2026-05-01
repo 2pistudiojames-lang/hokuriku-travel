@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北陸・中部 攝影旅遊指南 — 金澤・富山・名古屋・伊勢</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Noto Sans TC', 'Noto Sans JP', sans-serif;
+  background: #FAFAF7;
+  color: #2C2C2C;
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Tokens ===== */
+:root {
+  --primary: #238B8B;
+  --primary-light: #E4F3F3;
+  --primary-dark: #1a6e6e;
+  --bg: #FAFAF7;
+  --bg-white: #FFFFFF;
+  --bg-alt: #F3F1EC;
+  --text: #2C2C2C;
+  --text-secondary: #5A5A5A;
+  --text-muted: #999;
+  --border: #E0DDD8;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 8px rgba(0,0,0,0.06);
+  --shadow-hover: 0 6px 24px rgba(0,0,0,0.09);
+  --max-w: 1040px;
+
+  /* Region colors */
+  --kanazawa: #6B7B3E;
+  --kanazawa-bg: #F4F2E8;
+  --toyama: #2E7D8C;
+  --toyama-bg: #EFF5F6;
+  --nagoya: #A0522D;
+  --nagoya-bg: #F5F0EB;
+  --ise: #9E8A5A;
+  --ise-bg: #F5F3EB;
+}
+
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* ===== Header ===== */
+.site-header {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+}
+.site-header .container {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+}
+.site-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--text);
+  font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em;
+}
+.site-logo .logo-mark {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--primary); display: flex; align-items: center;
+  justify-content: center; color: #fff; font-size: 0.72rem; font-weight: 700;
+}
+.main-nav { display: flex; gap: 4px; list-style: none; }
+.main-nav a {
+  padding: 6px 14px; text-decoration: none; color: var(--text-secondary);
+  font-size: 0.82rem; font-weight: 500; border-radius: var(--radius-pill);
+  transition: all 0.2s;
+}
+.main-nav a:hover, .main-nav a:focus { background: var(--primary-light); color: var(--primary-dark); }
+
+/* ===== Hero ===== */
+.hero {
+  position: relative; padding: 100px 0 80px; text-align: center;
+  background: var(--bg); overflow: hidden;
+}
+/* Decorative topographic lines */
+.hero::before {
+  content: ''; position: absolute; inset: 0;  opacity: 0.45;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='600' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 150 Q75 90 150 150 T300 150 T450 150 T600 150' fill='none' stroke='%23238B8B' stroke-width='0.6' opacity='0.3'/%3E%3Cpath d='M0 170 Q75 120 150 170 T300 170 T450 170 T600 170' fill='none' stroke='%23238B8B' stroke-width='0.5' opacity='0.25'/%3E%3Cpath d='M0 190 Q75 150 150 190 T300 190 T450 190 T600 190' fill='none' stroke='%23238B8B' stroke-width='0.4' opacity='0.2'/%3E%3Cpath d='M0 210 Q75 175 150 210 T300 210 T450 210 T600 210' fill='none' stroke='%23238B8B' stroke-width='0.3' opacity='0.15'/%3E%3C/svg%3E");
+  background-size: 600px 300px;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+}
+.hero h1 {
+  position: relative; z-index: 1;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2.4rem; font-weight: 700; color: var(--text);
+  margin-bottom: 16px; letter-spacing: 0.06em; line-height: 1.4;
+}
+.hero h1 em {
+  font-style: normal; color: var(--primary);
+}
+.hero .subtitle {
+  position: relative; z-index: 1;
+  font-size: 0.92rem; color: var(--text-secondary); line-height: 1.9;
+  max-width: 480px; margin: 0 auto;
+}
+.hero .hero-meta {
+  position: relative; z-index: 1;
+  margin-top: 24px; display: flex; justify-content: center;
+  gap: 10px; flex-wrap: wrap;
+}
+.hero .hero-meta span {
+  padding: 5px 16px; background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: var(--radius-pill); font-size: 0.75rem; color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ===== Section ===== */
+.section { padding: 80px 0; }
+.section-header { margin-bottom: 48px; }
+.section-header .region-label {
+  display: inline-block; padding: 4px 18px;
+  border-radius: var(--radius-pill); font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 0.08em; margin-bottom: 14px;
+  color: #fff;
+}
+.section-header h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 4rem; font-weight: 700; color: var(--text);
+  margin-bottom: 6px; letter-spacing: 0.04em;
+}
+.section-header .section-sub {
+  font-size: 0.88rem; color: var(--text-secondary);
+}
+
+/* ===== Section Hero Illustration ===== */
+.section-hero {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 48px;
+  position: relative;
+  box-shadow: var(--shadow-card);
+}
+.section-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ===== Food Guide ===== */
+.food-guide {
+  margin-top: 40px;
+  padding: 28px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.food-guide h4 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+.food-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.food-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.food-list li .food-name {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.food-list li .food-name a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--text-muted);
+}
+.food-list li .food-name a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+.food-list li .food-desc {
+  color: var(--text-secondary);
+}
+
+/* Region colors */
+.region-kanazawa .region-label { background: var(--kanazawa); }
+.region-toyama .region-label { background: var(--toyama); }
+.region-nagoya .region-label { background: var(--nagoya); }
+.region-ise .region-label { background: var(--ise); }
+
+/* ===== Intro Block ===== */
+.region-intro {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px;
+  align-items: start; margin-bottom: 48px; padding: 28px 0;
+}
+.region-intro h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.05rem; font-weight: 700; margin-bottom: 10px;
+}
+.region-intro p {
+  font-size: 0.88rem; line-height: 1.9; color: var(--text-secondary);
+}
+.region-intro .intro-stats {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+  margin-top: 8px;
+}
+.intro-stats .stat {
+  padding: 14px 16px; border-radius: var(--radius-sm);
+  text-align: center;
+}
+.intro-stats .stat .stat-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.3rem; font-weight: 700; display: block; margin-bottom: 2px;
+}
+.intro-stats .stat .stat-label {
+  font-size: 0.7rem; color: var(--text-muted); font-weight: 500;
+}
+/* Region stat colors */
+.region-kanazawa .stat { background: var(--kanazawa-bg); }
+.region-kanazawa .stat-num { color: var(--kanazawa); }
+.region-toyama .stat { background: var(--toyama-bg); }
+.region-toyama .stat-num { color: var(--toyama); }
+.region-nagoya .stat { background: var(--nagoya-bg); }
+.region-nagoya .stat-num { color: var(--nagoya); }
+.region-ise .stat { background: var(--ise-bg); }
+.region-ise .stat-num { color: var(--ise); }
+
+/* ===== Cards ===== */
+.spot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 20px;
+}
+.spot-card {
+  background: var(--bg-white); border-radius: var(--radius-md);
+  border: 1px solid var(--border); overflow: hidden;
+  transition: all 0.25s;
+}
+.spot-card:hover {
+  border-color: transparent;
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+.spot-card .card-visual {
+  height: 56px; display: flex; align-items: center;
+  padding: 0 20px; gap: 12px; position: relative;
+}
+.spot-card .card-visual .card-icon {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.spot-card .card-visual .card-icon svg {
+  width: 18px; height: 18px;
+}
+.spot-card .card-visual .card-number {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+/* Region card header stripe */
+.region-kanazawa .card-visual { border-bottom: 2px solid var(--kanazawa-bg); }
+.region-kanazawa .card-icon { background: var(--kanazawa-bg); color: var(--kanazawa); }
+.region-toyama .card-visual { border-bottom: 2px solid var(--toyama-bg); }
+.region-toyama .card-icon { background: var(--toyama-bg); color: var(--toyama); }
+.region-nagoya .card-visual { border-bottom: 2px solid var(--nagoya-bg); }
+.region-nagoya .card-icon { background: var(--nagoya-bg); color: var(--nagoya); }
+.region-ise .card-visual { border-bottom: 2px solid var(--ise-bg); }
+.region-ise .card-icon { background: var(--ise-bg); color: var(--ise); }
+
+.spot-card .card-body { padding: 16px 20px 20px; }
+.spot-card h4 {
+  font-size: 0.98rem; font-weight: 700; color: var(--text);
+  margin-bottom: 6px;
+}
+.spot-card .card-desc {
+  font-size: 0.82rem; color: var(--text-secondary); line-height: 1.7;
+  margin-bottom: 12px;
+}
+.spot-card ul { list-style: none; }
+.spot-card ul li {
+  font-size: 0.78rem; color: var(--text-secondary);
+  padding: 3px 0 3px 16px; position: relative; line-height: 1.65;
+}
+.spot-card ul li::before {
+  content: ''; position: absolute; left: 0; top: 10px;
+  width: 5px; height: 5px; border-radius: 50%;
+}
+.region-kanazawa ul li::before { background: var(--kanazawa); }
+.region-toyama ul li::before { background: var(--toyama); }
+.region-nagoya ul li::before { background: var(--nagoya); }
+.region-ise ul li::before { background: var(--ise); }
+
+.card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+.card-tags span {
+  padding: 2px 9px; border-radius: var(--radius-pill);
+  font-size: 0.68rem; font-weight: 500;
+}
+.region-kanazawa .card-tags span { background: var(--kanazawa-bg); color: var(--kanazawa); }
+.region-toyama .card-tags span { background: var(--toyama-bg); color: var(--toyama); }
+.region-nagoya .card-tags span { background: var(--nagoya-bg); color: var(--nagoya); }
+.region-ise .card-tags span { background: var(--ise-bg); color: var(--ise); }
+
+/* ===== Photo Tips ===== */
+.photo-tips {
+  background: var(--bg-white); border-radius: var(--radius-md);
+  padding: 24px 28px; margin-top: 36px;
+  border: 1px solid var(--border);
+}
+.photo-tips h4 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.92rem; font-weight: 700; margin-bottom: 10px;
+}
+.photo-tips ul { list-style: none; }
+.photo-tips ul li {
+  font-size: 0.82rem; color: var(--text-secondary);
+  padding: 4px 0 4px 20px; position: relative; line-height: 1.7;
+}
+.photo-tips ul li::before {
+  content: '—'; position: absolute; left: 0;
+  font-size: 0.7rem; font-weight: 700;
+}
+.region-kanazawa .photo-tips h4 { color: var(--kanazawa); }
+.region-kanazawa .photo-tips ul li::before { color: var(--kanazawa); }
+.region-toyama .photo-tips h4 { color: var(--toyama); }
+.region-toyama .photo-tips ul li::before { color: var(--toyama); }
+.region-nagoya .photo-tips h4 { color: var(--nagoya); }
+.region-nagoya .photo-tips ul li::before { color: var(--nagoya); }
+.region-ise .photo-tips h4 { color: var(--ise); }
+.region-ise .photo-tips ul li::before { color: var(--ise); }
+
+/* ===== Section Divider ===== */
+.region-divider {
+  height: 1px; border: none; margin: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--border) 50%, transparent 100%);
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  background: var(--primary); padding: 56px 0; text-align: center;
+}
+.cta-section h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem; color: #fff; margin-bottom: 8px; font-weight: 700;
+}
+.cta-section p {
+  font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-bottom: 20px;
+}
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 28px; background: #fff; color: var(--primary-dark);
+  border-radius: var(--radius-pill); text-decoration: none;
+  font-weight: 700; font-size: 0.85rem;
+  transition: transform 0.2s;
+}
+.cta-btn:hover { transform: translateY(-1px); }
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #242424; color: rgba(255,255,255,0.5);
+  padding: 32px 0; font-size: 0.75rem;
+}
+.site-footer .container {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-nav { display: flex; gap: 16px; list-style: none; }
+.footer-nav a {
+  color: rgba(255,255,255,0.5); text-decoration: none;
+  font-size: 0.75rem; transition: color 0.2s;
+}
+.footer-nav a:hover { color: #fff; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero { padding: 64px 0 56px; }
+  .hero h1 { font-size: 1.6rem; }
+  .main-nav { gap: 0; }
+  .main-nav a { padding: 6px 8px; font-size: 0.75rem; }
+  .region-intro { grid-template-columns: 1fr; gap: 20px; }
+  .spot-grid { grid-template-columns: 1fr; }
+  .section { padding: 56px 0; }
+  .site-footer .container { flex-direction: column; gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <a href="#" class="site-logo">
+      <span class="logo-mark">旅</span>
+      北陸・中部 攝影指南
+    </a>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="#kanazawa">金澤</a></li>
+        <li><a href="#toyama">富山</a></li>
+        <li><a href="#nagoya">名古屋・岐阜</a></li>
+        <li><a href="#ise">伊勢</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>海と山、<em>光と影</em>を追って</h1>
+    <p class="subtitle">金澤、富山、名古屋、伊勢<br>四座城市的攝影記憶 — 經典與私房景點、最佳時段、鏡頭建議</p>
+    <div class="hero-meta">
+      <span>📷 FUJIFILM X-E5</span>
+      <span>📅 2026.05</span>
+      <span>📍 北陸・東海・中部</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- KANAZAWA                                     -->
+<!-- ============================================ -->
+<section class="section region-kanazawa" id="kanazawa">
+  <div class="container">
+    <div class="section-header">
+      <span class="region-label">ISHIKAWA</span>
+      <h2>金澤</h2>
+      <p class="section-sub">加賀百萬石的雅緻 — 庭園、茶屋、海鮮與職人文化</p>
+    </div>
+    <div class="section-hero">
+      <img src="images/kanazawa.jpg" alt="金澤 — 兼六園、城郭與市場的水彩插畫" loading="lazy">
+    </div>
+
+    <div class="region-intro">
+      <div>
+        <h3>為什麼攝影師愛金澤？</h3>
+        <p>金澤是日本保存最完整的江戶城下町之一。兼六園的四季、東茶屋街的木造連檐、近江町市場的色彩、犀川大橋的夕景 — 每一步都是構圖。雨天尤其迷人，石板路倒映著茶屋暖簾，是街拍的天堂。</p>
+      </div>
+      <div class="intro-stats">
+        <div class="stat"><span class="stat-num">14</span><span class="stat-label">推薦景點</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">世界遺產級</span></div>
+        <div class="stat"><span class="stat-num">1-2</span><span class="stat-label">建議天數</span></div>
+        <div class="stat"><span class="stat-num">雨天◎</span><span class="stat-label">最佳天氣</span></div>
+      </div>
+    </div>
+
+    <div class="spot-grid">
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- garden --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L12 22M7 7L12 2L17 7M4 12L12 7L20 12M4 17L12 12L20 17M6 22H18"/></svg></span>
+          <span class="card-number">01</span>
+        </div>
+        <div class="card-body">
+          <h4>兼六園</h4>
+          <p class="card-desc">日本三名園之一。徽軒燈籠與霞池的經典構圖、冬季雪吊絕景。</p>
+          <ul>
+            <li>最佳時段：清晨 7:00-8:30（晨霧繚繞、避開人潮）</li>
+            <li>鏡頭：XF 16-80mm 全景、XF 8-16mm 燈籠倒影</li>
+            <li>重點：霞池倒影、唐崎松雪吊、根上松根系</li>
+            <li>門票 320 円</li>
+          </ul>
+          <div class="card-tags"><span>庭園</span><span>四季</span><span>晨光</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- streets --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="6" width="7" height="15" rx="1"/><line x1="6.5" y1="7" x2="6.5" y2="10"/><line x1="17.5" y1="9" x2="17.5" y2="12"/></svg></span>
+          <span class="card-number">02</span>
+        </div>
+        <div class="card-body">
+          <h4>東茶屋街（ひがし茶屋街）</h4>
+          <p class="card-desc">金澤最具代表性的木造茶屋街。格子窗與暖簾的連續韻律。</p>
+          <ul>
+            <li>最佳時段：黃昏 16:30-18:00（斜射光穿格子窗）</li>
+            <li>鏡頭：XF 23mm F1.4 或 35mm F1.4 街拍定焦</li>
+            <li>重點：格子窗光影、暖簾特寫、雨中石板路倒影</li>
+            <li>技巧：慢快門捕捉行人流動感</li>
+          </ul>
+          <div class="card-tags"><span>街拍</span><span>木造建築</span><span>雨天絕景</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- museum --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="21"/></svg></span>
+          <span class="card-number">03</span>
+        </div>
+        <div class="card-body">
+          <h4>金澤 21 世紀美術館</h4>
+          <p class="card-desc">妹島和世設計的圓形美術館。「泳池」裝置是必拍經典。</p>
+          <ul>
+            <li>最佳時段：開館即入（人最少）</li>
+            <li>鏡頭：XF 8-16mm 建築空間感</li>
+            <li>重點：泳池上下雙層互動、圓形幾何、自然光與白色空間</li>
+            <li>常設展 360 円（泳池需付費區）</li>
+          </ul>
+          <div class="card-tags"><span>美術館</span><span>建築</span><span>裝置藝術</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- fish --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12C5 8 9 6 14 6C17 6 20 8 22 12C20 16 17 18 14 18C9 18 5 16 2 12Z"/><circle cx="18" cy="11" r="1" fill="currentColor"/></svg></span>
+          <span class="card-number">04</span>
+        </div>
+        <div class="card-body">
+          <h4>近江町市場</h4>
+          <p class="card-desc">「金澤的廚房」280 年歷史。鮮豔海鮮、蔬果、職人手作，色彩爆棚。</p>
+          <ul>
+            <li>最佳時段：上午 8:00-10:00（最活躍、光線好）</li>
+            <li>鏡頭：XF 50-140mm 攤位特寫、XF 23mm 市場全景</li>
+            <li>重點：海鮮攤色彩排列、職人手部動作、暖簾細節</li>
+            <li>注意：部分店家禁拍，先觀察再拍</li>
+          </ul>
+          <div class="card-tags"><span>市場</span><span>美食</span><span>人文</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- bridge --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18C4 12 8 8 12 8C16 8 20 12 22 18"/><line x1="6" y1="18" x2="6" y2="13"/><line x1="12" y1="18" x2="12" y2="10"/><line x1="18" y1="18" x2="18" y2="13"/></svg></span>
+          <span class="card-number">05</span>
+        </div>
+        <div class="card-body">
+          <h4>犀川大橋夕景</h4>
+          <p class="card-desc">犀川與淺野川交匯處。黃昏河面倒映天色，遠山層次分明。</p>
+          <ul>
+            <li>最佳時段：日落前後 30 分鐘（黃金→藍色時刻）</li>
+            <li>鏡頭：XF 16-80mm 河景、XF 50mm F1.0 橋樑細節</li>
+            <li>重點：河面倒影、天際線剪影、夜燈初上的對比</li>
+            <li>地點：犀川大橋或卯辰山展望台</li>
+          </ul>
+          <div class="card-tags"><span>夕景</span><span>河川</span><span>藍色時刻</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- sake --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2H16V6C16 6 18 8 18 12V20C18 21 17 22 16 22H8C7 22 6 21 6 20V12C6 8 8 6 8 6V2Z"/><line x1="8" y1="2" x2="16" y2="2"/></svg></span>
+          <span class="card-number">06</span>
+        </div>
+        <div class="card-body">
+          <h4>主計町茶屋街</h4>
+          <p class="card-desc">比東茶屋街更安靜道地的茶屋街。紅殻格子與小橋流水。</p>
+          <ul>
+            <li>最佳時段：午後 14:00-16:00（陽光穿透巷弄）</li>
+            <li>鏡頭：XF 23mm 或 35mm 狹窄街道標準視角</li>
+            <li>重點：紅殻格子窗、石橋與流水、路地縱深</li>
+            <li>優勢：觀光客少，適合慢拍</li>
+          </ul>
+          <div class="card-tags"><span>茶屋街</span><span>安靜</span><span>私房</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- overlook --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20L12 4L22 20"/><line x1="7" y1="14" x2="17" y2="14"/></svg></span>
+          <span class="card-number">07</span>
+        </div>
+        <div class="card-body">
+          <h4>卯辰山公園見晴台</h4>
+          <p class="card-desc">金澤市區制高點。可一望市街地與日本海，夕景到夜景的連續拍攝絕佳。</p>
+          <ul>
+            <li>最佳時段：日落前後（夕景→夜景過渡）</li>
+            <li>鏡頭：XF 16-80mm 城市全景、XF 50-140mm 壓縮遠景</li>
+            <li>重點：日本海日落、市街地光網、淺野川曲線</li>
+            <li>金澤站巴士約 15 分 + 步行 10 分鐘</li>
+          </ul>
+          <div class="card-tags"><span>夜景</span><span>展望台</span><span>夕景</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- shrine --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6H21"/><path d="M5 6V18"/><path d="M19 6V18"/><path d="M7 6V11H17V6"/><path d="M9 11V14"/><path d="M15 11V14"/></svg></span>
+          <span class="card-number">08</span>
+        </div>
+        <div class="card-body">
+          <h4>尾山神社</h4>
+          <p class="card-desc">日本初の和洋折衷神門。五色ステンドグラスが幻想的な光を放つ。</p>
+          <ul>
+            <li>最佳時段：白天（ステンドグラス透光）、夜間ライトアップ</li>
+            <li>鏡頭：XF 8-16mm 神門全景、XF 23mm ガラス細部</li>
+            <li>重點：ステンドグラスの透過光、和洋折衷建築、夜間照明</li>
+            <li>兼六園すぐ隣、免費參拜</li>
+          </ul>
+          <div class="card-tags"><span>神社</span><span>ステンドグラス</span><span>和洋折衷</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- garden --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22"/><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/></svg></span>
+          <span class="card-number">09</span>
+        </div>
+        <div class="card-body">
+          <h4>玉泉院丸庭園</h4>
+          <p class="card-desc">金澤城公園內的回遊式大名庭園。兼六園に匹敵する美しさ、人少穴場。</p>
+          <ul>
+            <li>最佳時段：清晨（人最少）、冬季雪景</li>
+            <li>鏡頭：XF 16-80mm 庭園全景、XF 50mm 池泉倒影</li>
+            <li>重點：池泉回遊の水面、金澤城石垣を背景にした庭園、雪化粧</li>
+            <li>兼六園から徒歩 5 分、免費</li>
+          </ul>
+          <div class="card-tags"><span>庭園</span><span>穴場</span><span>雪景</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- street --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="6" height="16" rx="1"/><rect x="14" y="7" width="6" height="13" rx="1"/><line x1="6" y1="8" x2="8" y2="8"/><line x1="6" y1="12" x2="8" y2="12"/><line x1="16" y1="10" x2="18" y2="10"/><line x1="16" y1="14" x2="18" y2="14"/></svg></span>
+          <span class="card-number">10</span>
+        </div>
+        <div class="card-body">
+          <h4>長町武家屋敷跡</h4>
+          <p class="card-desc">江戶時代武家屋敷が残る情緒あふれる街並み。土壁と石畳の質感。</p>
+          <ul>
+            <li>最佳時段：午前（光が土壁に美しく当たる）、雨後（石畳の湿った質感）</li>
+            <li>鏡頭：XF 23mm 路地縦深、XF 50mm 土壁テクスチャ</li>
+            <li>重點：土壁と石畳の路地、野村家庭園、武家屋敷の門</li>
+            <li>金澤站巴士 10 分「香林坊」下車</li>
+          </ul>
+          <div class="card-tags"><span>歷史街區</span><span>土壁</span><span>雨天絕景</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- gate --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V6C4 4.9 4.9 4 6 4H18C19.1 4 20 4.9 20 6V20"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="12" y1="4" x2="12" y2="20"/></svg></span>
+          <span class="card-number">11</span>
+        </div>
+        <div class="card-body">
+          <h4>金澤站 鼓門 & もてなしドーム</h4>
+          <p class="card-desc">金澤駅のシンボル。和の意匠と現代建築の融合。夜間ライトアップ。</p>
+          <ul>
+            <li>最佳時段：夜間ライトアップ、夕方シルエット</li>
+            <li>鏡頭：XF 8-16mm 鼓門全體、XF 16-80mm ドーム内</li>
+            <li>重點：鼓門の幾何学構造、もてなしドームの曲面、夜間照明</li>
+            <li>金澤駅直結、到着時に撮影可</li>
+          </ul>
+          <div class="card-tags"><span>建築</span><span>駅ランドマーク</span><span>夜景</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- water --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12H20"/><path d="M12 4V20"/><circle cx="8" cy="8" r="1"/><circle cx="16" cy="16" r="1"/></svg></span>
+          <span class="card-number">12</span>
+        </div>
+        <div class="card-body">
+          <h4>鈴木大拙館</h4>
+          <p class="card-desc">禪思想家・鈴木大拙を記念した建築。「水鏡の庭」が哲學的空間美。</p>
+          <ul>
+            <li>最佳時段：午前（水鏡の庭への光の反射）、冬季雪景</li>
+            <li>鏡頭：XF 16-80mm 建築全体、XF 50mm 水面反射</li>
+            <li>重點：水鏡の庭の反射ショット、建築と光の幾何学</li>
+            <li>金澤站巴士 10 分、要予約の場合あり</li>
+          </ul>
+          <div class="card-tags"><span>建築</span><span>禅</span><span>水鏡</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- library --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><rect x="6" y="7" width="4" height="10" rx="0.5"/><rect x="11" y="7" width="4" height="10" rx="0.5"/><line x1="17" y1="7" x2="17" y2="17"/></svg></span>
+          <span class="card-number">13</span>
+        </div>
+        <div class="card-body">
+          <h4>金澤海みらい圖書館</h4>
+          <p class="card-desc">全国で最も美しい圖書館の一つ。白壁に無數の四角い窓が並ぶ外觀。</p>
+          <ul>
+            <li>最佳時段：晴天（青空とのコントラスト）、夜間外觀</li>
+            <li>鏡頭：XF 8-16mm 外觀パターン、XF 16-80mm 内部空間</li>
+            <li>重點：穿孔白壁の幾何学パターン、内部から見る光と影</li>
+            <li>金澤站からバス約 40 分</li>
+          </ul>
+          <div class="card-tags"><span>建築</span><span>圖書館</span><span>幾何学</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- castle --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21H20"/><path d="M6 21V17L8 14L10 17V21"/><path d="M14 21V17L16 14L18 17V21"/><path d="M10 14V10L12 7L14 10V14"/><path d="M11 7V4L12 2L13 4V7"/></svg></span>
+          <span class="card-number">14</span>
+        </div>
+        <div class="card-body">
+          <h4>金澤城公園（菱櫓・五十間長屋）</h4>
+          <p class="card-desc">復元された城郭建築。白壁と鉛瓦のコントラストが美しい。</p>
+          <ul>
+            <li>最佳時段：早朝、雪景色（冬季）</li>
+            <li>鏡頭：XF 16-80mm 城郭全景、XF 50mm 海鼠壁細部</li>
+            <li>重點：菱櫓のシルエット、海鼠壁の白と鉛瓦の対比、鼠多門橋</li>
+            <li>兼六園に隣接、免費</li>
+          </ul>
+          <div class="card-tags"><span>城郭</span><span>白壁</span><span>雪景</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="photo-tips">
+      <h4>攝影筆記 — 金澤</h4>
+      <ul>
+        <li>雨天是金澤最好的攝影天氣 — 石板路反光、茶屋街更添風情</li>
+        <li>徽軒燈籠最佳角度是從對岸低角度拍攝倒影</li>
+        <li>黃昏時注意暖簾透出的暖光，可拍出懷舊氛圍</li>
+        <li>預留完整一天：上午庭園 → 中午市場 → 下午茶屋街 → 傍晚犀川</li>
+      </ul>
+    </div>
+
+    <div class="food-guide">
+      <h4>🍜 必吃美食 — 金澤</h4>
+      <ul class="food-list">
+        <li><span class="food-name"><a href="https://maps.google.com/?q=福井家+金沢" target="_blank" rel="noopener">福井家</a></span><span class="food-desc">治部煮老舖，鴨肉與麩的溫潤高湯燉品</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=金沢おでん+彩+金沢" target="_blank" rel="noopener">金沢おでん 彩</a></span><span class="food-desc">金澤關東煮專門，加賀野菜與海鮮炖煮</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=谷中葱+ぼたん+金沢" target="_blank" rel="noopener">谷中葱 ぼたん</a></span><span class="food-desc">近江町市場內烤魚定食，金澤家常味</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=はしまきや+金沢" target="_blank" rel="noopener">はしまきや</a></span><span class="food-desc">筷子捲御好燒，邊走邊吃的金澤 B 級美食</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=うら田+金沢" target="_blank" rel="noopener">うら田</a></span><span class="food-desc">近江市場熟食海鮮丼，現烤熱食為主</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=森八+本店+金沢" target="_blank" rel="noopener">森八 本店</a></span><span class="food-desc">百年和菓子老舖，招牌「福梅」配抹茶</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=中田屋+金沢駅前" target="_blank" rel="noopener">中田屋 金沢駅前店</a></span><span class="food-desc">人氣栗きんとん栗子甜點，綿密不膩</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=金沢牛亭+金沢" target="_blank" rel="noopener">金沢牛亭</a></span><span class="food-desc">平價金澤和牛定食，CP 值極高</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="region-divider">
+
+<!-- ============================================ -->
+<!-- TOYAMA                                       -->
+<!-- ============================================ -->
+<section class="section region-toyama" id="toyama">
+  <div class="container">
+    <div class="section-header">
+      <span class="region-label">TOYAMA</span>
+      <h2>富山</h2>
+      <p class="section-sub">立山連峰與富山灣之間 — 海山一線的壯闘與寧靜</p>
+    </div>
+    <div class="section-hero">
+      <img src="images/toyama.jpg" alt="富山 — 立山連峰、富山灣與海鮮的水彩插畫" loading="lazy">
+    </div>
+
+    <div class="region-intro">
+      <div>
+        <h3>為什麼攝影師愛富山？</h3>
+        <p>富山是日本唯一「在市區就能同時拍到 3,000m 級山稜與海平面」的城市。雨晴海岸的立山連峰倒映、環水公園的夕陽、庄川峽的翠綠深谷 — 無需上山，平地即絕景。5 月中旬新綠正盛，是風景攝影的黃金期。</p>
+      </div>
+      <div class="intro-stats">
+        <div class="stat"><span class="stat-num">14</span><span class="stat-label">推薦景點</span></div>
+        <div class="stat"><span class="stat-num">3,000m</span><span class="stat-label">可見山稜</span></div>
+        <div class="stat"><span class="stat-num">2-3</span><span class="stat-label">建議天數</span></div>
+        <div class="stat"><span class="stat-num">晴天◎</span><span class="stat-label">最佳天氣</span></div>
+      </div>
+    </div>
+
+    <div class="spot-grid">
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- coast --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 16C4 14 6 14 8 16C10 18 12 18 14 16C16 14 18 14 20 16L22 17"/><path d="M2 12C4 10 6 10 8 12C10 14 12 14 14 12C16 10 18 10 20 12"/><path d="M4 8L12 3L20 8"/></svg></span>
+          <span class="card-number">01</span>
+        </div>
+        <div class="card-body">
+          <h4>雨晴海岸</h4>
+          <p class="card-desc">日本最美海岸之一。晴天可同框拍攝立山連峰、富山灣與海岸線。</p>
+          <ul>
+            <li>最佳時段：日落前 1 小時（黃金光線打在山稜線）</li>
+            <li>鏡頭：XF 16-80mm 或 8-16mm 超廣角全景</li>
+            <li>重點：立山連峰與海面同框、沙灘倒影、岩礁前景</li>
+            <li>JR 冰見線「雨晴站」步行 6 分鐘</li>
+          </ul>
+          <div class="card-tags"><span>海岸</span><span>山脈同框</span><span>夕景</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- sunset --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18H22"/><path d="M4 14C4 9.6 7.6 6 12 6C16.4 6 20 9.6 20 14"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="4.9" y1="5.9" x2="6.3" y2="7.3"/><line x1="19.1" y1="5.9" x2="17.7" y2="7.3"/></svg></span>
+          <span class="card-number">02</span>
+        </div>
+        <div class="card-body">
+          <h4>環水公園</h4>
+          <p class="card-desc">富山灣面向日落方向的臨海公園。天橋、運河、夕陽構成絕佳構圖。</p>
+          <ul>
+            <li>最佳時段：日落前後（黃金到藍色時刻過渡）</li>
+            <li>鏡頭：XF 16-80mm 天橋全景、XF 50mm 夕陽特寫</li>
+            <li>重點：天橋倒影、運河對稱構圖、遠處阿爾卑斯山脈剪影</li>
+            <li>園內有「最美星巴克」玻璃建築也值得拍</li>
+          </ul>
+          <div class="card-tags"><span>公園</span><span>夕陽</span><span>建築</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- valley --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20L8 4L12 14L16 6L22 20"/></svg></span>
+          <span class="card-number">03</span>
+        </div>
+        <div class="card-body">
+          <h4>庄川峽</h4>
+          <p class="card-desc">翠綠溪谷中的遊覽船之旅。峽谷垂直岩壁與濃綠植被壯闊畫面。</p>
+          <ul>
+            <li>最佳時段：上午 9:00-11:00（順光、水面平靜）</li>
+            <li>鏡頭：XF 16-80mm 峽谷全景、XF 50-140mm 岩壁紋理</li>
+            <li>重點：峽谷 S 彎道、遊覽船比例感、水面倒影</li>
+            <li>遊覽船 大人 1,800 円</li>
+          </ul>
+          <div class="card-tags"><span>峽谷</span><span>遊覽船</span><span>新綠</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- village --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21H21"/><path d="M5 21V13L8 11L11 13V21"/><path d="M13 21V9L16 7L19 9V21"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="16" y1="14" x2="16" y2="14.01"/></svg></span>
+          <span class="card-number">04</span>
+        </div>
+        <div class="card-body">
+          <h4>散居村展望台</h4>
+          <p class="card-desc">五箇山地區特有的散居村落。農舍散布田園中，背景立山連峰。</p>
+          <ul>
+            <li>最佳時段：清晨薄霧或黃昏逆光剪影</li>
+            <li>鏡頭：XF 50-140mm 或 100-400mm（壓縮感）</li>
+            <li>重點：農舍分佈節奏、遠景山脈層次、田園色塊</li>
+            <li>交通：自駕或計程車，展望台免費</li>
+          </ul>
+          <div class="card-tags"><span>田園</span><span>展望台</span><span>長焦推薦</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- museum --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 3L21 8H3L12 3Z"/><line x1="7" y1="12" x2="7" y2="18"/><line x1="12" y1="12" x2="12" y2="18"/><line x1="17" y1="12" x2="17" y2="18"/></svg></span>
+          <span class="card-number">05</span>
+        </div>
+        <div class="card-body">
+          <h4>富山縣美術館</h4>
+          <p class="card-desc">2017 年開幕。內藤廣建築設計，頂樓可望見立山連峰的露台。</p>
+          <ul>
+            <li>最佳時段：午後 14:00-16:00（頂樓順光望山）</li>
+            <li>鏡頭：XF 8-16mm 建築內部、XF 16-80mm 露台山景</li>
+            <li>重點：清水混凝土線條、頂樓山景構圖、展覽空間</li>
+            <li>當期：テオ・ヤンセン展（2026 夏季預定）</li>
+          </ul>
+          <div class="card-tags"><span>美術館</span><span>建築</span><span>山景露台</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- overlook --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20L12 4L22 20"/><line x1="7" y1="14" x2="17" y2="14"/></svg></span>
+          <span class="card-number">06</span>
+        </div>
+        <div class="card-body">
+          <h4>吳羽山公園展望台</h4>
+          <p class="card-desc">富山市區制高點。天氣好時可俯瞰全市，遠眺立山連峰。</p>
+          <ul>
+            <li>最佳時段：清晨日出或傍晚城市夜景</li>
+            <li>鏡頭：XF 16-80mm 城市全景、XF 50-140mm 山脈壓縮</li>
+            <li>重點：城市與山脈層次、夜間光點與暗部山脈對比</li>
+            <li>富山站搭巴士約 15 分鐘</li>
+          </ul>
+          <div class="card-tags"><span>夜景</span><span>展望台</span><span>城市全景</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- river --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 14C4 12 6 12 8 14C10 16 12 16 14 14C16 12 18 12 20 14"/><path d="M2 18C4 16 6 16 8 18C10 20 12 20 14 18C16 16 18 16 20 18"/><line x1="12" y1="3" x2="12" y2="10"/></svg></span>
+          <span class="card-number">07</span>
+        </div>
+        <div class="card-body">
+          <h4>松川遊覽船 & 松川べり</h4>
+          <p class="card-desc">富山市中心を流れる松川沿い。春は桜並木、夜は屋台燈りが風情。</p>
+          <ul>
+            <li>最佳時段：春は桜（夜ライトアップ）、秋は紅葉</li>
+            <li>鏡頭：XF 16-80mm 川沿い全景、XF 50mm 水面反射</li>
+            <li>重點：桜のトンネル、屋台船の灯り、水面に映る街並み</li>
+            <li>富山站徒歩 10 分、遊覽船 大人 1,600 円</li>
+          </ul>
+          <div class="card-tags"><span>川</span><span>桜</span><span>夜屋台</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- ship --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20L6 16L10 20L14 16L18 20L22 16"/><path d="M4 16V8L12 4L20 8V16"/><line x1="12" y1="4" x2="12" y2="12"/><path d="M8 10H16"/></svg></span>
+          <span class="card-number">08</span>
+        </div>
+        <div class="card-body">
+          <h4>新湊大橋 & 海王丸パーク</h4>
+          <p class="card-desc">日本海側最大の斜張橋と優雅な帆船「海王丸」の組み合わせ。</p>
+          <ul>
+            <li>最佳時段：早朝（朝霧の中の帆船）、夕方（立山連峰を背に逆光）</li>
+            <li>鏡頭：XF 16-80mm 橋と帆船、XF 50-140mm 圧縮構図</li>
+            <li>重點：帆船「海王丸」、斜張橋の幾何学、立山連峰とのコラボ</li>
+            <li>あいの風とやま鉄道「高岡駅」からバス約 20 分</li>
+          </ul>
+          <div class="card-tags"><span>帆船</span><span>橋</span><span>絶景</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- sunset --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18H22"/><path d="M4 14C4 9.6 7.6 6 12 6C16.4 6 20 9.6 20 14"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="4.9" y1="5.9" x2="6.3" y2="7.3"/><line x1="19.1" y1="5.9" x2="17.7" y2="7.3"/></svg></span>
+          <span class="card-number">09</span>
+        </div>
+        <div class="card-body">
+          <h4>魚津大町海岸</h4>
+          <p class="card-desc">富山湾に沈む夕日がオレンジに染めるマジックアワー。春はホタルイカの青い發光。</p>
+          <ul>
+            <li>最佳時段：夕方マジックアワー、3-5月はホタルイカ</li>
+            <li>鏡頭：XF 16-80mm 夕景全景、XF 50-140mm 太陽特寫</li>
+            <li>重點：富山湾に沈む夕日、ホタルイカのブルーサンド、しんきろうロード</li>
+            <li>あいの風とやま鉄道「魚津駅」徒歩 15 分</li>
+          </ul>
+          <div class="card-tags"><span>夕日</span><span>ホタルイカ</span><span>海岸</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- tower --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="2" width="8" height="4" rx="1"/><rect x="6" y="6" width="12" height="4"/><rect x="4" y="10" width="16" height="12" rx="1"/><line x1="12" y1="14" x2="12" y2="18"/></svg></span>
+          <span class="card-number">10</span>
+        </div>
+        <div class="card-body">
+          <h4>富山市役所展望塔</h4>
+          <p class="card-desc">地上 70m 的免費展望台。立山連峰パノラマが一望。</p>
+          <ul>
+            <li>最佳時段：早朝（立山連峰が最も鮮明）、夕暮れ夜景</li>
+            <li>鏡頭：XF 8-16mm パノラマ、XF 16-80mm 城市夜景</li>
+            <li>重點：立山連峰パノラマ、富山市街夜景</li>
+            <li>富山站徒歩 15 分、入場免費</li>
+          </ul>
+          <div class="card-tags"><span>展望台</span><span>免費</span><span>立山連峰</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- port --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21H21"/><path d="M5 21V14L9 10L13 14V21"/><path d="M15 21V12L19 8V21"/><line x1="9" y1="14" x2="9" y2="14.01"/></svg></span>
+          <span class="card-number">11</span>
+        </div>
+        <div class="card-body">
+          <h4>岩瀨エリア（北前船の港町）</h4>
+          <p class="card-desc">北前船で栄えた港町の面影。白壁の蔵と石畳の路地がノスタルジック。</p>
+          <ul>
+            <li>最佳時段：早朝（靜かな港町）、夕方（港のシルエット）</li>
+            <li>鏡頭：XF 23mm 白壁蔵街景、XF 50mm 石畳テクスチャ</li>
+            <li>重點：回船問屋の白壁蔵、石畳の路地、港の風景</li>
+            <li>富山站からバス約 15 分「岩瀨濱」方面</li>
+          </ul>
+          <div class="card-tags"><span>港町</span><span>白壁</span><span>歷史</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- glass art --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L8 8L12 22L16 8L12 2Z"/><path d="M8 8H16"/><circle cx="12" cy="14" r="2"/></svg></span>
+          <span class="card-number">12</span>
+        </div>
+        <div class="card-body">
+          <h4>富山市ガラス美術館</h4>
+          <p class="card-desc">隈研吾設計の建築内にあるガラス美術館。繊細な作品と建築空間。</p>
+          <ul>
+            <li>最佳時段：昼間（自然光によるガラスの輝き）、雨天室內</li>
+            <li>鏡頭：XF 8-16mm 建築空間、XF 50mm ガラス作品マクロ</li>
+            <li>重點：ガラス作品のマクロ撮影、建築の幾何学、光の屈折</li>
+            <li>富山站徒歩 10 分、富山グランドプラザ内</li>
+          </ul>
+          <div class="card-tags"><span>ガラス</span><span>隈研吾</span><span>室內</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- coast --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 16C4 14 6 14 8 16C10 18 12 18 14 16C16 14 18 14 20 16L22 17"/><circle cx="18" cy="5" r="3"/><path d="M15 18L12 22L9 18"/></svg></span>
+          <span class="card-number">13</span>
+        </div>
+        <div class="card-body">
+          <h4>生地海岸（日本の夕日百選）</h4>
+          <p class="card-desc">「日本の夕日百選」に選ばれた夕景スポット。巨大な夕日と漁師町のシルエット。</p>
+          <ul>
+            <li>最佳時段：夕方（日本の夕日百選の夕景）</li>
+            <li>鏡頭：XF 16-80mm 夕景全景、XF 50-140mm 太陽特寫</li>
+            <li>重點：富山湾に沈む巨大な夕日、漁師町のシルエット</li>
+            <li>あいの風とやま鉄道「生地駅」徒歩 10 分</li>
+          </ul>
+          <div class="card-tags"><span>夕日百選</span><span>海岸</span><span>漁港</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- mountain --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20L10 8L14 14L18 10L22 20"/><circle cx="18" cy="5" r="2"/></svg></span>
+          <span class="card-number">14</span>
+        </div>
+        <div class="card-body">
+          <h4>牛岳パノラマ展望台</h4>
+          <p class="card-desc">標高 600m から 360度パノラマ。立山連峰〜富山平野〜日本海の大展望。</p>
+          <ul>
+            <li>最佳時段：夕方〜夜景、星空攝影</li>
+            <li>鏡頭：XF 16-80mm パノラマ、XF 8-16mm 星空</li>
+            <li>重點：立山連峰シルエット＋街の灯り、日本海の水平線</li>
+            <li>車で富山市内から約 40 分</li>
+          </ul>
+          <div class="card-tags"><span>絶景</span><span>夜景</span><span>星空</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="photo-tips">
+      <h4>攝影筆記 — 富山</h4>
+      <ul>
+        <li>雨晴海岸必備廣角鏡，天氣好時立山連峰倒映海面是絕景</li>
+        <li>富山日落方向在富山灣正西方，環水公園是最佳日落點</li>
+        <li>5 月中旬庄川峽新綠正盛，峽谷內光線變化大，注意曝光補償</li>
+        <li>散居村展望台用長焦壓縮農舍與山脈，效果最戲劇化</li>
+      </ul>
+    </div>
+
+    <div class="food-guide">
+      <h4>🍜 必吃美食 — 富山</h4>
+      <ul class="food-list">
+        <li><span class="food-name"><a href="https://maps.google.com/?q=大喜+富山+ブラックラーメン" target="_blank" rel="noopener">大喜</a></span><span class="food-desc">富山黑拉麵元祖，濃厚醬油豚骨配黑色炸醬</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=白えび亭+富山" target="_blank" rel="noopener">白えび亭</a></span><span class="food-desc">富山站內白蝦天婦羅與炸物，酥脆鮮美</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=氷見うどん+源+富山" target="_blank" rel="noopener">氷見うどん 源</a></span><span class="food-desc">富山名物氷見烏龍麵，Q 彈粗麵條配熱湯</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=ひまわり+富山+お好み焼き" target="_blank" rel="noopener">ひまわり</a></span><span class="food-desc">富山鄉土御好燒，份量大配料豐富</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=銀兵+富山" target="_blank" rel="noopener">銀兵</a></span><span class="food-desc">創意富山熟食魚料理，照燒鹽烤皆美味</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=ケーキハウス+タカマツ+富山" target="_blank" rel="noopener">ケーキハウス・タカマツ</a></span><span class="food-desc">富山老字號甜品店，招牌奶油蛋糕與水果塔</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=クロッキー+富山+カフェ" target="_blank" rel="noopener">クロッキー</a></span><span class="food-desc">富山站旁平價洋食早餐，厚切吐司配手沖咖啡</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=旭寿司+富山+焼き物" target="_blank" rel="noopener">旭壽司</a></span><span class="food-desc">烤海鮮專門，烤牡蠣烤魚為主全部熟食</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="region-divider">
+
+<!-- ============================================ -->
+<!-- NAGOYA / GIFU                                -->
+<!-- ============================================ -->
+<section class="section region-nagoya" id="nagoya">
+  <div class="container">
+    <div class="section-header">
+      <span class="region-label">AICHI・GIFU</span>
+      <h2>名古屋・犬山・岐阜</h2>
+      <p class="section-sub">城郭、古道、川町 — 從都市到歷史的攝影散步</p>
+    </div>
+    <div class="section-hero">
+      <img src="images/nagoya.jpg" alt="名古屋 — 名古屋城、鵜飼與鰻魚飯的水彩插畫" loading="lazy">
+    </div>
+
+    <div class="region-intro">
+      <div>
+        <h3>為什麼攝影師愛這一帶？</h3>
+        <p>名古屋是日本第三大都會，但真正的攝影寶藏在外圍：犬山有日本最古老的木造天守、岐阜有長良川的鸕鶿漁與金華山纜車夜景、郡上八幡的水路古鎮。一小時車程內，從現代建築跳到江戶水鄉。</p>
+      </div>
+      <div class="intro-stats">
+        <div class="stat"><span class="stat-num">14</span><span class="stat-label">推薦景點</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">國寶・城郭</span></div>
+        <div class="stat"><span class="stat-num">2-3</span><span class="stat-label">建議天數</span></div>
+        <div class="stat"><span class="stat-num">5/11起</span><span class="stat-label">鸕鶿漁開幕</span></div>
+      </div>
+    </div>
+
+    <div class="spot-grid">
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- castle --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21H20"/><path d="M6 21V17L8 14L10 17V21"/><path d="M14 21V17L16 14L18 17V21"/><path d="M10 14V10L12 7L14 10V14"/><path d="M11 7V4L12 2L13 4V7"/></svg></span>
+          <span class="card-number">01</span>
+        </div>
+        <div class="card-body">
+          <h4>名古屋城</h4>
+          <p class="card-desc">日本三大名城之一。金鯱是名古屋象徵。本丸御殿障壁畫值得細拍。</p>
+          <ul>
+            <li>最佳時段：開城即入或秋季紅葉期間</li>
+            <li>鏡頭：XF 16-80mm 天守全景、XF 50mm F1.0 建築細節</li>
+            <li>重點：金鯱特寫、金箔障壁畫、石垣幾何線條</li>
+            <li>天守閣整修中（預計 2027），可拍外觀</li>
+          </ul>
+          <div class="card-tags"><span>城郭</span><span>歷史</span><span>金鯱</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- castle --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21H20"/><path d="M8 21V12L12 8L16 12V21"/><path d="M10 8V5L12 3L14 5V8"/></svg></span>
+          <span class="card-number">02</span>
+        </div>
+        <div class="card-body">
+          <h4>犬山城</h4>
+          <p class="card-desc">日本現存最古老的木造天守。座落木曾川畔，有「白帝城」之稱。</p>
+          <ul>
+            <li>最佳時段：午後順光（白色牆面明亮）或秋季紅葉</li>
+            <li>鏡頭：XF 50-140mm 河對岸全景、XF 23mm 城內木造結構</li>
+            <li>重點：從木曾川對岸拍天守與山勢、內部樑柱、石垣</li>
+            <li>門票 550 円</li>
+          </ul>
+          <div class="card-tags"><span>國寶</span><span>木造天守</span><span>木曾川</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- mountain --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20L8 10L12 15L16 8L22 20"/><circle cx="18" cy="5" r="2"/></svg></span>
+          <span class="card-number">03</span>
+        </div>
+        <div class="card-body">
+          <h4>岐阜城 & 金華山纜車</h4>
+          <p class="card-desc">山頂天守閣。纜車可俯瞰岐阜市區與長良川全景。夜景著名。</p>
+          <ul>
+            <li>最佳時段：日落前上山 → 藍色時刻拍夜景</li>
+            <li>鏡頭：XF 16-80mm 城市全景、XF 8-16mm 山頂廣角</li>
+            <li>重點：長良川蛇行曲線、城市光網與山脈對比</li>
+            <li>纜車往返 1,100 円 + 城門票 200 円</li>
+          </ul>
+          <div class="card-tags"><span>夜景遺產</span><span>纜車</span><span>長良川</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- fire --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C8 22 4 18 4 13C4 8 8 2 12 2C16 2 20 8 20 13C20 18 16 22 12 22Z"/><path d="M12 22C10 22 8 20 8 17C8 14 10 12 12 12C14 12 16 14 16 17C16 20 14 22 12 22Z"/></svg></span>
+          <span class="card-number">04</span>
+        </div>
+        <div class="card-body">
+          <h4>長良川鸕鶿漁（鵜飼）</h4>
+          <p class="card-desc">1300 年歷史傳統漁法。夜間篝火照亮河面、鸕鶿潛水動態畫面。</p>
+          <ul>
+            <li>期間：5/11 - 10/15（正好在行程期間！）</li>
+            <li>最佳時段：19:00-21:00 夜間觀覽船</li>
+            <li>鏡頭：XF 50-140mm 捕魚動態、XF 23mm F1.4 篝火氛圍</li>
+            <li>重點：篝火倒影、鸕鶿入水瞬間、船頭 silhouette</li>
+          </ul>
+          <div class="card-tags"><span>傳統文化</span><span>夜間攝影</span><span>5月限定</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- water --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 14C4 12 6 12 8 14C10 16 12 16 14 14C16 12 18 12 20 14"/><path d="M2 18C4 16 6 16 8 18C10 20 12 20 14 18C16 16 18 16 20 18"/><line x1="12" y1="3" x2="12" y2="10"/></svg></span>
+          <span class="card-number">05</span>
+        </div>
+        <div class="card-body">
+          <h4>郡上八幡</h4>
+          <p class="card-desc">岐阜山間水路古鎮。清澈水渠貫穿街道，老屋倒映水面，有「小京都」之稱。</p>
+          <ul>
+            <li>最佳時段：午前 9:00-11:00（順光、觀光客未到）</li>
+            <li>鏡頭：XF 23mm 水路街道、XF 50mm F1.0 水面特寫</li>
+            <li>重點：水渠中錦鯉與老屋倒影、宗祇水、小巷景深</li>
+            <li>名鐵巴士從名古屋約 2 小時或自駕</li>
+          </ul>
+          <div class="card-tags"><span>水路古鎮</span><span>名水</span><span>私房景點</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- garden --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22"/><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/></svg></span>
+          <span class="card-number">06</span>
+        </div>
+        <div class="card-body">
+          <h4>德川園</h4>
+          <p class="card-desc">名古屋市中心的日本庭園。尾張德川家別邸遺址，池塘瀑布造景精美。</p>
+          <ul>
+            <li>最佳時段：上午或秋季紅葉期間</li>
+            <li>鏡頭：XF 16-80mm 庭園全景、XF 50mm 花卉特寫</li>
+            <li>重點：龍仙湖倒影、虎仙橋弧線、牡丹園（5 月花期）</li>
+            <li>門票 300 円</li>
+          </ul>
+          <div class="card-tags"><span>庭園</span><span>市區</span><span>牡丹</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- shrine --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6H21"/><path d="M5 6V18"/><path d="M19 6V18"/><path d="M7 6V11H17V6"/><path d="M9 11V14"/><path d="M15 11V14"/></svg></span>
+          <span class="card-number">07</span>
+        </div>
+        <div class="card-body">
+          <h4>熱田神宮</h4>
+          <p class="card-desc">日本三大神社之一。供奉草薙劍（三神器之一）。境內古木參天，參道莊嚴。</p>
+          <ul>
+            <li>最佳時段：清晨（鳥居參道在晨光中最美）</li>
+            <li>鏡頭：XF 16-80mm 參道縱深、XF 50mm 信長壁與細節</li>
+            <li>重點：一之鳥居正面構圖、本殿屋頂曲線、信長牆（築地牆）</li>
+            <li>免費參拜，寶物館 500 円</li>
+          </ul>
+          <div class="card-tags"><span>神社</span><span>歷史</span><span>參道</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- temple --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8L12 3L22 8"/><rect x="4" y="8" width="16" height="12" rx="1"/><path d="M10 12H14V20"/><line x1="4" y1="14" x2="20" y2="14"/></svg></span>
+          <span class="card-number">08</span>
+        </div>
+        <div class="card-body">
+          <h4>大須觀音 & 大須商店街</h4>
+          <p class="card-desc">名古屋最具活力的商店街。觀音寺本堂朱紅莊嚴，商店街古今交錯。</p>
+          <ul>
+            <li>最佳時段：上午（商店街人少、光線柔和）</li>
+            <li>鏡頭：XF 23mm 商店街街拍、XF 35mm 觀音堂建築</li>
+            <li>重點：大須觀音朱紅本堂、商店街手作招牌、古著店門面</li>
+            <li>約 1,200 間店鋪，被譽為名古屋的「秋葉原+原宿」</li>
+          </ul>
+          <div class="card-tags"><span>商店街</span><span>寺廟</span><span>街拍</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- glass --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="8" rx="8" ry="4"/><path d="M4 8V16C4 18.2 7.6 20 12 20C16.4 20 20 18.2 20 16V8"/><path d="M9 13L12 16L15 13"/></svg></span>
+          <span class="card-number">09</span>
+        </div>
+        <div class="card-body">
+          <h4>綠洲 21（オアシス 21）</h4>
+          <p class="card-desc">名古屋地標。玻璃屋頂的「水之宇宙船」漂浮在空中，幾何結構獨特。</p>
+          <ul>
+            <li>最佳時段：黃昏到夜間（玻璃水面映照城市燈光）</li>
+            <li>鏡頭：XF 8-16mm 廣角幾何、XF 16-80mm 全景</li>
+            <li>重點：玻璃屋頂的水面倒影、鋼構曲線、夜間照明</li>
+            <li>免費入場，屋頂可步行</li>
+          </ul>
+          <div class="card-tags"><span>建築</span><span>夜景</span><span>幾何</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- tower --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L8 10H16L12 2Z"/><rect x="10" y="10" width="4" height="8"/><path d="M8 18H16"/><path d="M6 22H18"/><line x1="12" y1="10" x2="12" y2="6"/></svg></span>
+          <span class="card-number">10</span>
+        </div>
+        <div class="card-body">
+          <h4>Midland Square 天空步道</h4>
+          <p class="card-desc">名古屋最高建築的屋外展望台。開放感極強，無玻璃阻隔，270° 環景。</p>
+          <ul>
+            <li>最佳時段：日落前 30 分鐘入場（黃金→夜景過渡）</li>
+            <li>鏡頭：XF 8-16mm 廣角全景、XF 50-140mm 遠景壓縮</li>
+            <li>重點：名古屋站周邊城市肌理、遠處山脈輪廓、鐵路動態</li>
+            <li>門票 800 円，44F 屋外</li>
+          </ul>
+          <div class="card-tags"><span>展望台</span><span>夜景</span><span>城市</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- craft --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22S22 17.5 22 12S17.5 2 12 2Z"/><path d="M12 6V12L16 14"/></svg></span>
+          <span class="card-number">11</span>
+        </div>
+        <div class="card-body">
+          <h4>Noritake Garden（ノリタケガーデン）</h4>
+          <p class="card-desc">百年陶瓷品牌園區。紅磚煙囪、窯爐遺跡與白色陶器展示，工業遺產美學。</p>
+          <ul>
+            <li>最佳時段：午後（紅磚在側光下質感最好）</li>
+            <li>鏡頭：XF 23mm 紅磚建築、XF 50mm 陶器靜物</li>
+            <li>重點：6號窯紅磚建築、煙囪剪影、手繪陶盤細節</li>
+            <li>免費入園，Craft Center 500 円</li>
+          </ul>
+          <div class="card-tags"><span>工業遺產</span><span>陶瓷</span><span>紅磚</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- art --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15L16 10L5 21"/></svg></span>
+          <span class="card-number">12</span>
+        </div>
+        <div class="card-body">
+          <h4>愛知縣美術館</h4>
+          <p class="card-desc">位於栄的愛知藝術文化中心內。建築本身就是幾何攝影題材，常設展有毕卡索、雷諾瓦。</p>
+          <ul>
+            <li>最佳時段：開館即入或週五夜間開放（至 20:00）</li>
+            <li>鏡頭：XF 8-16mm 建築幾何、XF 50mm 畫作細節</li>
+            <li>重點：玻璃帷幕倒影、挑高大廳透視、展覽空間光影</li>
+            <li>常設展 510 円，栄站步行 2 分鐘</li>
+          </ul>
+          <div class="card-tags"><span>美術館</span><span>建築</span><span>栄</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- ship --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20L6 16L10 20L14 16L18 20L22 16"/><path d="M4 16V8L12 4L20 8V16"/><line x1="12" y1="4" x2="12" y2="12"/><path d="M8 10H16"/></svg></span>
+          <span class="card-number">13</span>
+        </div>
+        <div class="card-body">
+          <h4>名古屋港水族館 & 藍色列車</h4>
+          <p class="card-desc">日本最大級水族館。殺人鯨、海豚表演壯觀。港區「藍色列車」是拍照打卡點。</p>
+          <ul>
+            <li>最佳時段：上午（海豚表演約 11:00）</li>
+            <li>鏡頭：XF 50-140mm 海豚動態、XF 16-80mm 水槽全景</li>
+            <li>重點：藍色水槽光影、海豚跳躍瞬間、港口黃昏</li>
+            <li>門票 2,000 円，名古屋港站步行 5 分鐘</li>
+          </ul>
+          <div class="card-tags"><span>水族館</span><span>港口</span><span>親子</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- flower --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2C13 5 15 7 18 7C15 8 14 10 14 12C14 10 13 8 12 2Z"/><path d="M22 12C19 13 17 15 17 18C16 15 14 14 12 14C14 13 16 12 22 12Z"/><path d="M12 22C11 19 9 17 6 17C9 16 10 14 10 12C10 14 11 16 12 22Z"/><path d="M2 12C5 11 7 9 7 6C8 9 10 10 12 10C10 11 8 12 2 12Z"/></svg></span>
+          <span class="card-number">14</span>
+        </div>
+        <div class="card-body">
+          <h4>白鳥庭園</h4>
+          <p class="card-desc">名古屋最大的日本庭園。位於名古屋城附近，以心字池為中心的回遊式庭園。</p>
+          <ul>
+            <li>最佳時段：午前（水面平靜、逆光池畔）</li>
+            <li>鏡頭：XF 16-80mm 庭園全景、XF 50mm 紅葉與水面</li>
+            <li>重點：心字池倒影、茶室建築、四季花卉</li>
+            <li>門票 300 円，地下鐵「市役所站」步行 10 分鐘</li>
+          </ul>
+          <div class="card-tags"><span>庭園</span><span>池泉</span><span>寧靜</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="photo-tips">
+      <h4>攝影筆記 — 名古屋・岐阜</h4>
+      <ul>
+        <li>犬山城從木曾川對岸（犬山橋附近）拍攝全景最壯觀</li>
+        <li>鸕鶿漁夜間拍攝需高 ISO，建議帶腳架或用 X-E5 防震</li>
+        <li>郡上八幡是攝影秘境，建議自駕前往，預留半天</li>
+        <li>岐阜城夜景列為「日本夜景遺產」，日落前上山卡位</li>
+        <li>名古屋市區可一天走完：名古屋城 → 大須 → 栄（オアシス 21 + 愛知美術館）→ Midland Square 夕景</li>
+        <li>熱田神宮清晨最莊嚴，參道古木的晨光是不容錯過的畫面</li>
+        <li>Noritake Garden 的紅磚適合午後側光拍攝，質感極佳</li>
+      </ul>
+    </div>
+
+    <div class="food-guide">
+      <h4>🍜 必吃美食 — 名古屋</h4>
+      <ul class="food-list">
+        <li><span class="food-name"><a href="https://maps.google.com/?q=あつた蓬莱軒+本店+名古屋" target="_blank" rel="noopener">あつた蓬莱軒 本店</a></span><span class="food-desc">ひつまぶし鰻魚飯元祖，炭烤鰻魚四種吃法</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=矢場とん+本店+名古屋" target="_blank" rel="noopener">矢場とん 本店</a></span><span class="food-desc">名古屋味噌炸豬排名店，濃郁赤味噌淋酥脆豬排</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=天むす+千寿+本店+名古屋" target="_blank" rel="noopener">天むす 千寿 本店</a></span><span class="food-desc">手作天婦羅飯糰專門，酥脆蝦天婦羅包海苔飯</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=喫茶マリーン+呉服町+名古屋" target="_blank" rel="noopener">喫茶マリーン 呉服町店</a></span><span class="food-desc">名古屋あんかけ義式炒麵，濃稠醬汁配 Q 彈麵條</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=世界の山ちゃん+本店+名古屋" target="_blank" rel="noopener">世界の山ちゃん 本店</a></span><span class="food-desc">名古屋手羽先炸雞翅名店，香辣酥脆配啤酒最道地</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=コンパル+高辻本店+名古屋" target="_blank" rel="noopener">コンパル 高辻本店</a></span><span class="food-desc">經典洋食喫茶，招牌水果三明治與手作甜點</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=蓬莱軒+松坂屋店+名古屋" target="_blank" rel="noopener">蓬莱軒 松坂屋店</a></span><span class="food-desc">百貨內ひつまぶし分店，觀光客友善免排長隊</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=伏見フルーツガーデン+名古屋" target="_blank" rel="noopener">伏見フルーツガーデン</a></span><span class="food-desc">名古屋站人氣水果三明治，當季鮮果視覺味覺雙享受</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="region-divider">
+
+<!-- ============================================ -->
+<!-- ISE                                          -->
+<!-- ============================================ -->
+<section class="section region-ise" id="ise">
+  <div class="container">
+    <div class="section-header">
+      <span class="region-label">MIE</span>
+      <h2>伊勢</h2>
+      <p class="section-sub">日本的精神故鄉 — 神宮、參道、海女與二見浦</p>
+    </div>
+    <div class="section-hero">
+      <img src="images/ise.jpg" alt="伊勢 — 神宮鳥居、夫婦岩與海濱町的水彩插畫" loading="lazy">
+    </div>
+
+    <div class="region-intro">
+      <div>
+        <h3>為什麼攝影師愛伊勢？</h3>
+        <p>伊勢神宮是日本最重要的神社，每 20 年一次的式年遷宮造就了永恆的建築美學。おかげ横丁的江戶風情、二見浦夫婦岩的日出、鳥羽的海女文化 — 這裡拍的是「日本的根源」。莊嚴、純淨、安靜。</p>
+      </div>
+      <div class="intro-stats">
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">推薦景點</span></div>
+        <div class="stat"><span class="stat-num">2000年</span><span class="stat-label">神宮歷史</span></div>
+        <div class="stat"><span class="stat-num">1-2</span><span class="stat-label">建議天數</span></div>
+        <div class="stat"><span class="stat-num">日出◎</span><span class="stat-label">最佳時段</span></div>
+      </div>
+    </div>
+
+    <div class="spot-grid">
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- torii --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6H21"/><path d="M5 6V18"/><path d="M19 6V18"/><path d="M4 4L6 6"/><path d="M20 4L18 6"/><path d="M7 10H17"/></svg></span>
+          <span class="card-number">01</span>
+        </div>
+        <div class="card-body">
+          <h4>伊勢神宮（外宮）</h4>
+          <p class="card-desc">正式名稱「豐受大神宮」。供奉食物與產業之神。境內古木參天。</p>
+          <ul>
+            <li>最佳時段：清晨 5:30-7:30（霧氣繚繞、參拜者少）</li>
+            <li>鏡頭：XF 16-80mm 參道縱深、XF 50mm 御手洗水面</li>
+            <li>重點：宇治橋純白與河面倒影、參道古木垂直線、勾玉池</li>
+            <li>正殿無法拍攝，境內參道與建築細節可拍</li>
+          </ul>
+          <div class="card-tags"><span>神宮</span><span>參道</span><span>清晨</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- torii2 --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5H21"/><path d="M4 3L7 5"/><path d="M20 3L17 5"/><path d="M6 5V19"/><path d="M18 5V19"/><path d="M8 9H16"/><path d="M6 19H18"/></svg></span>
+          <span class="card-number">02</span>
+        </div>
+        <div class="card-body">
+          <h4>伊勢神宮（內宮）</h4>
+          <p class="card-desc">正式名稱「皇大神宮」。天照大御神鎮座之所。五十鈴川清流與宇治橋。</p>
+          <ul>
+            <li>最佳時段：開門即入（清晨 5:00 前）</li>
+            <li>鏡頭：XF 16-80mm 全程、XF 8-16mm 宇治橋全景</li>
+            <li>重點：宇治橋正面構圖、五十鈴川御手洗、杉木參天</li>
+            <li>路線：先外宮 → 再內宮（傳統順序）</li>
+          </ul>
+          <div class="card-tags"><span>神宮</span><span>五十鈴川</span><span>日本遺產</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- street --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="6" height="16" rx="1"/><rect x="14" y="7" width="6" height="13" rx="1"/><line x1="6" y1="8" x2="8" y2="8"/><line x1="6" y1="12" x2="8" y2="12"/><line x1="16" y1="10" x2="18" y2="10"/><line x1="16" y1="14" x2="18" y2="14"/></svg></span>
+          <span class="card-number">03</span>
+        </div>
+        <div class="card-body">
+          <h4>おかげ横丁</h4>
+          <p class="card-desc">內宮門前的江戶風情商店街。重現明治時代伊勢路風景，赤福本店在此。</p>
+          <ul>
+            <li>最佳時段：上午（人潮較少、光線溫和）</li>
+            <li>鏡頭：XF 23mm 或 35mm 街拍定焦</li>
+            <li>重點：木造街屋連檐、手寫招牌、赤福抹茶與紅豆特寫</li>
+            <li>美食：赤福、伊勢烏龍麵、松阪牛串</li>
+          </ul>
+          <div class="card-tags"><span>商店街</span><span>江戶風情</span><span>美食</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- sunrise --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18H22"/><path d="M4 14C4 9.6 7.6 6 12 6C16.4 6 20 9.6 20 14"/><circle cx="12" cy="3" r="2"/><line x1="12" y1="10" x2="12" y2="14"/></svg></span>
+          <span class="card-number">04</span>
+        </div>
+        <div class="card-body">
+          <h4>二見浦 夫婦岩</h4>
+          <p class="card-desc">二座岩石以注連繩相連，日出從兩岩之間升起。5 月可見鑽石般的日出。</p>
+          <ul>
+            <li>最佳時段：日出（5 月約 4:50-5:10），需前一晚住附近</li>
+            <li>鏡頭：XF 16-80mm 夫婦岩全景、XF 50-140mm 太陽特寫</li>
+            <li>重點：注連繩與日出構圖、潮汐帶來不同前景</li>
+            <li>JR 參宮線「二見浦站」步行 15 分鐘</li>
+          </ul>
+          <div class="card-tags"><span>日出</span><span>夫婦岩</span><span>海岸</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- diver --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="3"/><path d="M8 10H16"/><path d="M9 10V18"/><path d="M15 10V18"/><path d="M7 22L9 18"/><path d="M17 22L15 18"/></svg></span>
+          <span class="card-number">05</span>
+        </div>
+        <div class="card-body">
+          <h4>鳥羽 海女文化</h4>
+          <p class="card-desc">三重是日本海女文化中心。海女小屋體驗可近距離拍攝傳統白色磯着。</p>
+          <ul>
+            <li>最佳時段：上午（海女體驗時段）</li>
+            <li>鏡頭：XF 50-140mm 海女入水瞬間、XF 23mm 海女小屋場景</li>
+            <li>重點：白色潛水服的視覺衝擊、炭火烤鮑魚現場、海港背景</li>
+            <li>海女小屋はちまん需提前預約</li>
+          </ul>
+          <div class="card-tags"><span>海女</span><span>文化體驗</span><span>人文</span></div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="card-visual">
+          <span class="card-icon"><!-- village --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21H21"/><path d="M5 21V11L10 7L15 11V21"/><path d="M10 14H14V21"/><line x1="10" y1="11" x2="10" y2="11.01"/><path d="M17 21V14L20 11V21"/></svg></span>
+          <span class="card-number">06</span>
+        </div>
+        <div class="card-body">
+          <h4>志摩地中海村</h4>
+          <p class="card-desc">西班牙風情度假村。白色建築、藍色裝飾、水路運河，意外地在伊勢志摩。</p>
+          <ul>
+            <li>最佳時段：午後順光</li>
+            <li>鏡頭：XF 23mm 建築街景、XF 50mm F1.0 裝飾細節</li>
+            <li>重點：白色牆面與藍天對比、水路倒影、拱門構圖</li>
+            <li>近鐵「鵜方站」轉巴士約 10 分鐘</li>
+          </ul>
+          <div class="card-tags"><span>異國風情</span><span>建築</span><span>度假村</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="photo-tips">
+      <h4>攝影筆記 — 伊勢</h4>
+      <ul>
+        <li>伊勢神宮清晨拍攝最佳，宇治橋在晨霧中最美</li>
+        <li>夫婦岩日出需前一晚住二見浦，5 月日出約 4:50</li>
+        <li>おかげ横丁赤福本店手作過程可拍，但先詢問店家</li>
+        <li>建議路線：外宮（清晨）→ 內宮 + おかげ横丁（上午）→ 鳥羽（下午）→ 二見浦（隔日清晨）</li>
+      </ul>
+    </div>
+
+    <div class="food-guide">
+      <h4>🍜 必吃美食 — 伊勢</h4>
+      <ul class="food-list">
+        <li><span class="food-name"><a href="https://maps.google.com/?q=赤福本店+伊勢" target="_blank" rel="noopener">赤福本店</a></span><span class="food-desc">創業 300 年老舖，極上こし餡與柔軟麻糬的赤福餅</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=冨田屋+伊勢" target="_blank" rel="noopener">冨田屋</a></span><span class="food-desc">百年伊勢烏龍麵專門，極粗柔軟麵條配濃厚玉露醬油</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=山田ふくすけ+伊勢" target="_blank" rel="noopener">山田ふくすけ おかげ横丁店</a></span><span class="food-desc">おかげ横丁內伊勢烏龍麵名店，甘甜沾汁絕妙平衡</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=すし久+伊勢" target="_blank" rel="noopener">すし久 本店</a></span><span class="food-desc">手こね壽司元祖，醬油漬鰹魚鋪滿醋飯的鄉土壽司</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=二軒茶屋餅+角屋本店+伊勢" target="_blank" rel="noopener">二軒茶屋餅 角屋本店</a></span><span class="food-desc">江戶時代創業和菓子老舖，外宮旁的名物烤餅</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=伊勢萬+伊勢" target="_blank" rel="noopener">伊勢萬 本店</a></span><span class="food-desc">伊勢烏龍麵與伊勢茶一次滿足的觀光人氣午餐</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=豆腐庵+伊勢" target="_blank" rel="noopener">おかげ横丁 豆腐庵</a></span><span class="food-desc">手作豆腐料理與揚出豆腐，搭配溫熱伊勢茶</span></li>
+        <li><span class="food-name"><a href="https://maps.google.com/?q=伊勢神職茶屋+伊勢" target="_blank" rel="noopener">伊勢神職茶屋</a></span><span class="food-desc">伊勢茶抹茶拿鐵與和風甜點，早餐菜單也充實</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h3>收拾行囊，帶上相機</h3>
+    <p>金澤的雨、富山的海、名古屋的城、伊勢的光 — 每一幀都值得等待。</p>
+    <a href="#" class="cta-btn">↑ 回到頂部</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div>© 2026 北陸・中部 攝影旅遊指南 — FUJIFILM X-E5</div>
+    <ul class="footer-nav">
+      <li><a href="#kanazawa">金澤</a></li>
+      <li><a href="#toyama">富山</a></li>
+      <li><a href="#nagoya">名古屋</a></li>
+      <li><a href="#ise">伊勢</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
